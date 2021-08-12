@@ -39,38 +39,37 @@
                     <a href="#">Contact</a>
                 </li>
             </ul>
-            <ul id="menu2">
-                <li id="logo-menu2">
-                    <a href="#">
-                        Menu
-                    </a>
+            <!-- clickMenu -->
+            <div class="icon-menu">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <ul class="click-menu">
+                <li>
+                    <a id="tick" href="#">Home</a>
                 </li>
                 <li>
-                    <ul>
-                        <li>
-                            <a href="#">Home</a>
-                        </li>
-                        <li>
-                            <a href="#">About</a>
-                        </li>
-                        <li>
-                            <a href="#">Work</a>
-                        </li>
-                        <li>
-                            <a href="#">Team</a>
-                        </li>
-                        <li>
-                            <a href="#">Services</a>
-                        </li>
-                        <li>
-                            <a href="#">Features</a>
-                        </li>
-                        <li>
-                            <a href="#">Contact</a>
-                        </li>
-                    </ul>
-               </li>
+                    <a href="#">About</a>
+                </li>
+                <li>
+                    <a href="#">Work</a>
+                </li>
+                <li>
+                    <a href="#">Team</a>
+                </li>
+                <li>
+                    <a href="#">Services</a>
+                </li>
+                <li>
+                    <a href="#">Features</a>
+                </li>
+                <li>
+                    <a href="#">Contact</a>
+                </li>
             </ul>
+
+            
         </div>
     </header>
     <section id="jumbotron">
@@ -452,4 +451,21 @@
         </div>
     </section>
 </body>
+<script>
+    var iconMenu = document.querySelector('.icon-menu');
+    var bodyElement = document.querySelector('body');
+    var clickMenu = document.querySelector('.click-menu');
+    iconMenu.onclick = function(e) {
+        e.stopPropagation();
+        this.classList.toggle('show');
+    }
+    bodyElement.onclick = function() {
+        if(iconMenu.classList.contains('show')) {
+            iconMenu.classList.remove('show');
+        }
+    }
+    clickMenu.onclick = function(e) {
+        e.stopPropagation();
+    }
+</script>
 </html>

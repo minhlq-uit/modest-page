@@ -31,9 +31,7 @@ header {
     padding-bottom: 25px;
     background-color: #1d2126;
 }
-#menu2 {
-    display: none;
-}
+
 
 .container {
     max-width: 1170px;
@@ -951,69 +949,12 @@ section#footer .container {
     header #menu1{
         display: none;
     }
-    header #menu2 {
-        display: block;
-    }
-    header #menu2 #logo-menu2 {
-        display: block;
-        position: relative;
-    }
-    header #menu2 > li:nth-child(2){
-        display: block;
-    }
-    header #menu2 > li:nth-child(2){
-        position: absolute;
-        top: 79px;
-        right: 0px;
-        z-index: 1;
-    }
-    header ul li {
-        padding: 0 0 0 10px;
-    }
-    header ul li:hover {
-        border: none;
-        cursor: none;
-    }
-    header #menu2 li:nth-child(2) ul {
-        background-color: #1d2126;
-        display: none;
-    }
-    header #menu2 li:nth-child(2) ul li {
-        display: block;
-        width: 100%;
-        margin-bottom: 10px;
-        border-bottom: 1px solid #23b7a4;
-        border-left: 1px solid #23b7a4;
-    }
-    header ul li:first-child {
-        border: none;
-    }
-    #menu2 li:nth-child(2) ul li {
-        border-radius: 0;
-        height: 40px;
-        margin: 0 !important;
-        padding: 0 30px;
-        line-height: 40px;
-        padding-right: 40px;
-    }
-    #menu2 li:nth-child(2) ul li:first-child {
-        border-top: 1px solid #23b7a4;
-    }
-    #menu2 li:nth-child(2) ul li:hover {
-        background-color: #23b7a4;
-    }
-    #menu2 li:nth-child(2) ul li:hover a {
-        color: #ffffff;
-    }
-    header #menu2 #logo-menu2 {
-        padding: 0 30px;
-        margin: 0 !important;
-        border-radius: 0;
-        padding-right: 40px;
-        border: 1px solid #23b7a4;
-    }
-    header #menu2:hover li:nth-child(2) ul {
-        display: block;
+    /* click-menu */
+    .icon-menu div {
+        width: 35px;
+        height: 5px;
+        background-color: white;
+        margin: 6px 0;
     }
     /* jumbotron */
     #jumbotron .container {
@@ -1116,68 +1057,11 @@ section#footer .container {
     header #menu1{
         display: none;
     }
-    header #menu2 {
-        display: block;
-    }
-    header #menu2 #logo-menu2 {
-        display: block;
-        position: relative;
-    }
-    header #menu2 > li:nth-child(2){
-        display: block;
-    }
-    header #menu2 > li:nth-child(2){
-        position: absolute;
-        top: 79px;
-        right: 0px;
-        z-index: 1;
-        padding: 0;
-        border: none;
-    }
-    header ul li:hover {
-        border: none;
-        cursor: none;
-    }
-    header #menu2 li:nth-child(2) ul {
-        background-color: #1d2126;
-        display: none;
-    }
-    header #menu2 li:nth-child(2) ul li {
-        display: block;
-        width: 100%;
-        margin-bottom: 10px;
-        border-bottom: 1px solid #23b7a4;
-        border-left: 1px solid #23b7a4;
-    }
-    header ul li:first-child {
-        border: none;
-    }
-    #menu2 li:nth-child(2) ul li {
-        border-radius: 0;
-        height: 40px;
-        margin: 0 !important;
-        padding: 0 30px;
-        line-height: 40px;
-        padding-right: 40px;
-    }
-    #menu2 li:nth-child(2) ul li:first-child {
-        border-top: 1px solid #23b7a4;
-    }
-    #menu2 li:nth-child(2) ul li:hover {
-        background-color: #23b7a4;
-    }
-    #menu2 li:nth-child(2) ul li:hover a {
-        color: #ffffff;
-    }
-    header #menu2 #logo-menu2 {
-        padding: 0 30px;
-        margin: 0 !important;
-        border-radius: 0;
-        padding-right: 40px;
-        border: 1px solid #23b7a4;
-    }
-    header #menu2:hover li:nth-child(2) ul {
-        display: block;
+    .icon-menu div {
+        width: 35px;
+        height: 5px;
+        background-color: white;
+        margin: 6px 0;
     }
     /* jumbotrons */
     #jumbotron .container {
@@ -1318,3 +1202,38 @@ section#footer .container {
     }
 }
 
+/* update click-menu */
+.icon-menu[open=true] + .click-menu {
+    display: block;
+}
+header {
+    position: relative;
+}
+
+header .click-menu {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 81px;
+    background-color: black;
+    z-index: 1;
+    width: 200px;
+    /* 100% viewport hieght */
+    height: 100vh; 
+}
+
+.click-menu li {
+    display: block;
+    margin: 5px 0px;
+
+}
+.click-menu li:first-child {
+    border: none;
+}
+.click-menu li:first-child a {
+    color: #a4aead;
+}
+
+.show + ul{
+    display: block;
+}
