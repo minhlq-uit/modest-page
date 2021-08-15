@@ -946,6 +946,10 @@ section#footer .container {
         width: 90%;
     }
     /* header */
+    header {
+        position: fixed;
+        z-index: 1;
+    }
     header #menu1{
         display: none;
     }
@@ -1054,6 +1058,10 @@ section#footer .container {
         width: 100%;
     }
     /* header */
+    header {
+        position: fixed;
+        z-index: 1;
+    }
     header #menu1{
         display: none;
     }
@@ -1208,11 +1216,14 @@ section#footer .container {
 }
 header {
     position: relative;
+    position: fixed;
+    z-index: 1;
 }
 
 header .click-menu {
     display: none;
     position: absolute;
+    position: fixed;
     right: 0;
     top: 81px;
     background-color: black;
@@ -1220,6 +1231,7 @@ header .click-menu {
     width: 200px;
     /* 100% viewport hieght */
     height: 100vh; 
+    background:#1d2126;
 }
 
 .click-menu li {
