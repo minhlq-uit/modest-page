@@ -893,7 +893,6 @@ section#footer .container {
     }
     #teams #teams-member .person .information {
         overflow-y: hidden;
-        width: 256px;
     }
     #teams #teams-member .person .information a img {
         max-width: 100%;
