@@ -887,7 +887,7 @@ section#footer .container {
         flex-wrap: wrap;
     }
     #teams #teams-member .person {
-        width: calc((100% - 40px) / 2);
+        width: calc((738px - 40px) / 2);
         padding: 0px 43px;
         margin-bottom: 40px;
     }
